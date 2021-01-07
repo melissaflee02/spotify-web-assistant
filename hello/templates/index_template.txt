@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Spotify Assistant</title>
+  <link rel="icon" href="static/images/spotify_logo.png" type="image/x-icon">
+  <link rel="stylesheet" href="static/styles/main.css">
+</head>
+
+<body style="background-image:url('static/images/background.png');height:100%;background-repeat:no-repeat;background-size:cover;background-attachment:fixed">
+
+  <h1>Welcome to your Spotify Assistant!</h1>
+
+  <form action="submitArtist" method="GET">
+    <p><br>
+      <label for="artistURI">Please enter the Spotify URI of your favorite artist:</label>
+      <input name="artistURI" id="artistURI" placeholder="spotify:artist:0du5cEVh5yTK9QJze8zA0C">
+      <button>Submit Artist URI</button>
+    </p>
+  </form>
+
+  <div class="dropdown">
+    <button onclick="dropdownFunc()" class="dropbtn">Download Queue</button>
+    <div id="myDropdown" class="dropdown-content">
+      <div class="tracksDiv"><b style="float:left"><span style="background-color: #278f56">Q u e u e (download with the three dots to the right of the audio player):</span></b><br><!--NEXT SONG--></div><br>
+    </div>
+  </div>
+
+
+  <!--TEXT HERE-->
+
+  <script>
+    function displayCompletion() {
+      alert("Track will be added to the end of the Download Queue at the top of the page. Press OK to proceed.");
+    }
+
+    function dropdownFunc() {
+      document.getElementById("myDropdown").classList.toggle("show");
+    }
+
+    // Close the dropdown if the user clicks outside of it
+    window.onclick = function(event) {
+      if (!event.target.matches('.dropbtn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    }
+  </script>
+
+</body>
+
+</html>
