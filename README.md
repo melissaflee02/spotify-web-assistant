@@ -1,6 +1,6 @@
 # Spotify Web Assistant
 
-A custom-built Django app that has been deployed to Heroku.
+A custom-built Django app that has been deployed to Heroku. App can be accessed at https://melissalee.herokuapp.com/
 
 ## Documentation
 
