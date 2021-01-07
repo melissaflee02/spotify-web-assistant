@@ -1,0 +1,7 @@
+django
+gunicorn
+django-heroku
+requests
+spotipy
+pytube
+moviepy
